@@ -13,7 +13,7 @@ const Movie=({ poster, title, genres, synopsis })=>(
             <div className="Movie_Genres">
                 {genres.map((genre, index) => <MovieGenre genre={ genre } key={ index }  />)}
             </div>
-            <p className="Movie__Synopsis">
+            <div className="Movie__Synopsis">
                 <LinesEllipsis
                     text={ synopsis }
                     maxLine='3'
@@ -21,13 +21,13 @@ const Movie=({ poster, title, genres, synopsis })=>(
                     trimRight
                     basedOn='letters'
                 />
-            </p>
+            </div>
         </div>
     </div>
 )
 
 const MoviePoster=({ poster, alt })=>(
-    <img src={ poster } className="Movie_Poster" alt={ alt } title={ alt }/>
+    <img src={ poster } className="Movie__Poster" alt={ alt } title={ alt }/>
 )
 
 const MovieGenre=({ genre })=>(
